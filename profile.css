@@ -76,7 +76,7 @@ ul li::before {
 /* 버튼 */
 button {
   margin-top: 2vw;
-  padding: 0.6em 1.4em;
+  padding: 0.7em 1.6em;
   font-size: clamp(14px, 1.2vw, 18px);
   background: transparent;
   color: white;
