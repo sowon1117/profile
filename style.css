@@ -7,25 +7,23 @@ body {
   display: flex;                     /* 중앙 정렬을 위한 flexbox 설정 */
   justify-content: center;          /* 수평 중앙 정렬 */
   align-items: center;              /* 수직 중앙 정렬 */
-  min-height: 100vh;                    /* 화면 전체 높이 사용 */
-  overflow-x: hidden;                 /* 스크롤이 생기지 않도록 설정 */
-  overflow-y: auto;      /* ✔ 세로는 스크롤 가능하도록 */
+  height: 100vh;                    /* 화면 전체 높이 사용 */
+  overflow: hidden;                 /* 스크롤이 생기지 않도록 설정 */
 }
 
 /* 전체 콘텐츠를 감싸는 박스 */
 .container {
   display: flex;                     /* 수평 정렬을 위한 flexbox */
   flex-direction: row;              /* 아이템을 가로 방향으로 배치 */
-  flex-wrap: wrap;                 /* 모바일에서 세로로 쌓이도록 추가 */
   align-items: center;              /* 수직 정렬 */
   justify-content: space-between;   /* 양쪽 끝에 요소 배치하고 간격 띄움 */
-  width: 90vw;                      /* 전체 화면 너비의 80%만 사용 */
+  width: 80vw;                      /* 전체 화면 너비의 80%만 사용 */
   max-width: 1000px;                /* 최대 너비 제한 */
+  min-width: 600px;
   gap: 4vw;                         /* 좌우 콘텐츠 간격 */
-  height: auto;           /* 높이 고정 추가: 없으면 높이가 0일 수도 있음 */
+  height: 400px;           /* 높이 고정 추가: 없으면 높이가 0일 수도 있음 */
   padding: 2rem;                  /* 내부 여백 추가 */
   background-color: #042550; /* 테스트용 배경색 */
-  box-sizing: border-box;
 }
 
 /* 왼쪽 영역: 프로필 이미지와 이름 */
