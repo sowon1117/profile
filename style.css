@@ -35,7 +35,7 @@ html, body {
   min-width: 600px;               /* PC 이상 화면용 최소너비 */
   gap: 4vw;                      
   min-height: 400px;   
-  heigh: auto;
+  height: auto;
   background-color: #042550;     
 }
 
