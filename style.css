@@ -19,10 +19,9 @@ body {
   justify-content: space-between;   /* 양쪽 끝에 요소 배치하고 간격 띄움 */
   width: 80vw;                      /* 전체 화면 너비의 80%만 사용 */
   max-width: 1000px;                /* 최대 너비 제한 */
-  min-width: 600px;
+  min-width: 600px;                 /* 최소 너비 제한 (너무 작아지지 않게) */
   gap: 4vw;                         /* 좌우 콘텐츠 간격 */
   height: 400px;           /* 높이 고정 추가: 없으면 높이가 0일 수도 있음 */
-  padding: 2rem;                  /* 내부 여백 추가 */
   background-color: #042550; /* 테스트용 배경색 */
 }
 
@@ -114,4 +113,10 @@ img {
   pointer-events: none; /* 마우스 이벤트 무효화 */
   user-drag: none;      /* 이미지 드래그 방지 */
   -webkit-user-drag: none; /* Safari용 */
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* 가로 스크롤 방지 */
 }
