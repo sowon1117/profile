@@ -44,13 +44,14 @@ html, body {
   width: 40%;                    
 }
 
+/* 제목 크기 키우기 */
 .left h1 {
-  font-size: clamp(20px, 2.5vw, 36px); 
+  font-size: clamp(28px, 4vw, 48px);  /* 기존 20~36px에서 키움 */
 }
 
 .left h1 span {
   color: #aaa;                  
-  font-size: clamp(14px, 1.2vw, 20px); 
+  font-size: clamp(18px, 2vw, 24px); /* 기존 14~20px에서 키움 */
   margin-left: 0.5vw;          
 }
 
@@ -75,15 +76,17 @@ html, body {
   gap: 1vw;                   
 }
 
+/* 본문 글씨 키우기 */
 .right p {
-  font-size: clamp(14px, 1.2vw, 18px); 
+  font-size: clamp(18px, 2vw, 22px); /* 기존 14~18px에서 키움 */
   line-height: 1.6;           
   margin: 0;                  
 }
 
+/* 강조 텍스트 크기 키우기 */
 .right strong {
   color: #aaa;               
-  font-size: clamp(13px, 1vw, 16px); 
+  font-size: clamp(16px, 1.5vw, 20px); /* 기존 13~16px에서 키움 */
   display: block;            
   margin-bottom: 0.3em;      
 }
@@ -91,8 +94,8 @@ html, body {
 /* 공통 버튼 스타일 */
 button {
   margin-top: 2vw;             
-  padding: 0.6em 1.4em;        
-  font-size: clamp(14px, 1.2vw, 18px); 
+  padding: 0.7em 1.6em;        /* 약간 패딩 키움 */
+  font-size: clamp(18px, 2vw, 22px); /* 기존 14~18px에서 키움 */
   background: transparent;     
   color: white;                
   border: 1px solid white;     
