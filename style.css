@@ -61,6 +61,7 @@ html, body {
   object-fit: cover;           
   margin-top: 2vw;             
   box-shadow: 0 0 1vw rgba(0, 0, 0, 0.5); 
+  border: 2px solid white;
 }
 
 /* 오른쪽 영역 */
