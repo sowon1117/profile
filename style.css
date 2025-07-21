@@ -7,8 +7,9 @@ body {
   display: flex;                     /* 중앙 정렬을 위한 flexbox 설정 */
   justify-content: center;          /* 수평 중앙 정렬 */
   align-items: center;              /* 수직 중앙 정렬 */
-  height: 100vh;                    /* 화면 전체 높이 사용 */
-  overflow: hidden;                 /* 스크롤이 생기지 않도록 설정 */
+  min-height: 100vh;                    /* 화면 전체 높이 사용 */
+  overflow-x: hidden;                 /* 스크롤이 생기지 않도록 설정 */
+  overflow-y: auto;      /* ✔ 세로는 스크롤 가능하도록 */
 }
 
 /* 전체 콘텐츠를 감싸는 박스 */
