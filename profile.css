@@ -85,6 +85,10 @@ button {
   cursor: pointer;
   transition: background 0.3s;
 }
+button:hover {
+  background: white;           
+  color: black;                
+}
 
 /* 추가 정보 섹션 */
 .additional-info {
