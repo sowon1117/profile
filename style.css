@@ -1,120 +1,144 @@
 /* body 기본 스타일 */
 body {
-  margin: 0;                          /* 바깥 여백 제거 */
-  padding: 0;                         /* 안쪽 여백 제거 */
-  font-family: 'Pretendard-Regular', sans-serif;  /* 전체 폰트를 프리텐다드로 설정 */
-  background-color: #042550;         /* 배경 색상 어두운 파랑 */
-  color: white;                      /* 기본 글씨 색상 흰색 */
-  display: flex;                     /* 중앙 정렬을 위한 flexbox 설정 */
-  justify-content: center;           /* 수평 중앙 정렬 */
-  align-items: center;               /* 수직 중앙 정렬 */
-  height: 100vh;                    /* 화면 전체 높이 사용 */
-  overflow: hidden;                 /* 스크롤이 생기지 않도록 설정 */
-  user-select: none;                /* 텍스트 선택 방지 */
-  -webkit-user-select: none;       /* Safari */
-  -moz-user-select: none;          /* Firefox */
-  -ms-user-select: none;           /* IE/Edge */
+  margin: 0;                          
+  padding: 0;                         
+  font-family: 'Pretendard-Regular', sans-serif;  
+  background-color: #042550;         
+  color: white;                      
+  display: flex;                     
+  justify-content: center;           
+  align-items: center;               
+  height: 100vh;                    
+  overflow: hidden;                 
+  user-select: none;                
+  -webkit-user-select: none;       
+  -moz-user-select: none;          
+  -ms-user-select: none;           
 }
 
 /* html과 body에 스크롤 완전 차단 및 높이 100% 설정 */
 html, body {
   margin: 0;
   padding: 0;
-  overflow: hidden;                /* 가로, 세로 스크롤 모두 차단 */
+  overflow: hidden;                
   height: 100%;
 }
 
 /* 전체 콘텐츠를 감싸는 박스 */
 .container {
-  display: flex;                   /* 수평 정렬을 위한 flexbox */
-  flex-direction: row;             /* 아이템을 가로 방향으로 배치 */
-  align-items: center;             /* 수직 정렬 */
-  justify-content: space-between;  /* 양쪽 끝에 요소 배치하고 간격 띄움 */
-  width: 80vw;                    /* 전체 화면 너비의 80%만 사용 */
-  max-width: 1000px;              /* 최대 너비 제한 */
-  min-width: 600px;               /* 최소 너비 제한 (너무 작아지지 않게) */
-  gap: 4vw;                      /* 좌우 콘텐츠 간격 */
-  height: 400px;                 /* 높이 고정 추가: 없으면 높이가 0일 수도 있음 */
-  background-color: #042550;     /* 테스트용 배경색 */
+  display: flex;                   
+  flex-direction: row;             
+  align-items: center;             
+  justify-content: space-between;  
+  width: 80vw;                    
+  max-width: 1000px;              
+  min-width: 600px;               /* PC 이상 화면용 최소너비 */
+  gap: 4vw;                      
+  height: 400px;                 
+  background-color: #042550;     
 }
 
-/* 왼쪽 영역: 프로필 이미지와 이름 */
+/* 왼쪽 영역 */
 .left {
-  text-align: center;             /* 가운데 정렬 */
-  width: 40%;                    /* 전체 너비의 40% 차지 */
+  text-align: center;             
+  width: 40%;                    
 }
 
 .left h1 {
-  font-size: clamp(20px, 2.5vw, 36px); /* 반응형 글씨 크기: 최소 20px, 최대 36px */
+  font-size: clamp(20px, 2.5vw, 36px); 
 }
 
 .left h1 span {
-  color: #aaa;                  /* 회색으로 표시 */
-  font-size: clamp(14px, 1.2vw, 20px); /* 이름 옆 설명의 반응형 글씨 크기 */
-  margin-left: 0.5vw;          /* 왼쪽 여백 */
+  color: #aaa;                  
+  font-size: clamp(14px, 1.2vw, 20px); 
+  margin-left: 0.5vw;          
 }
 
-/* 프로필 이미지 스타일 */
 .profile-img {
-  width: 100%;                 /* 너비는 부모 요소에 맞춤 */
-  max-width: 220px;            /* 최대 너비 제한 */
-  border-radius: 40px;         /* 둥근 테두리 */
-  object-fit: cover;           /* 이미지 비율 유지하면서 잘림 */
-  margin-top: 2vw;             /* 위쪽 여백 */
-  box-shadow: 0 0 1vw rgba(0, 0, 0, 0.5); /* 그림자 효과 */
+  width: 100%;                 
+  max-width: 220px;            
+  border-radius: 40px;         
+  object-fit: cover;           
+  margin-top: 2vw;             
+  box-shadow: 0 0 1vw rgba(0, 0, 0, 0.5); 
 }
 
-/* 오른쪽 정보 영역 */
+/* 오른쪽 영역 */
 .right {
-  width: 55%;                 /* 전체의 55% 차지 */
-  display: flex;              /* 세로로 쌓기 위해 flex 사용 */
-  flex-direction: column;     /* 세로 정렬 */
-  gap: 1vw;                   /* 각 정보 사이 간격 */
+  width: 55%;                 
+  display: flex;              
+  flex-direction: column;     
+  gap: 1vw;                   
 }
 
 .right p {
-  font-size: clamp(14px, 1.2vw, 18px); /* 본문 글씨 크기 (반응형) */
-  line-height: 1.6;           /* 줄 간격 */
-  margin: 0;                  /* 기본 여백 제거 */
+  font-size: clamp(14px, 1.2vw, 18px); 
+  line-height: 1.6;           
+  margin: 0;                  
 }
 
 .right strong {
-  color: #aaa;               /* 강조 텍스트 색상 */
-  font-size: clamp(13px, 1vw, 16px); /* 강조 텍스트의 반응형 크기 */
-  display: block;            /* 줄 바꿈 */
-  margin-bottom: 0.3em;      /* 아래 여백 */
+  color: #aaa;               
+  font-size: clamp(13px, 1vw, 16px); 
+  display: block;            
+  margin-bottom: 0.3em;      
 }
 
 /* 공통 버튼 스타일 */
 button {
-  margin-top: 2vw;             /* 위쪽 여백 */
-  padding: 0.6em 1.4em;        /* 안쪽 여백 (위아래, 좌우) */
-  font-size: clamp(14px, 1.2vw, 18px); /* 반응형 글씨 크기 */
-  background: transparent;     /* 배경 없음 */
-  color: white;                /* 텍스트 색상 */
-  border: 1px solid white;     /* 흰색 테두리 */
-  border-radius: 8px;          /* 둥근 테두리 */
-  cursor: pointer;             /* 마우스 커서 변경 */
-  transition: background 0.3s; /* 호버 시 부드러운 효과 */
+  margin-top: 2vw;             
+  padding: 0.6em 1.4em;        
+  font-size: clamp(14px, 1.2vw, 18px); 
+  background: transparent;     
+  color: white;                
+  border: 1px solid white;     
+  border-radius: 8px;          
+  cursor: pointer;             
+  transition: background 0.3s; 
 }
 
 button:hover {
-  background: white;           /* 호버 시 배경색 흰색으로 */
-  color: black;                /* 호버 시 글씨 색 검정으로 */
+  background: white;           
+  color: black;                
 }
 
 /* 가운데 구분선 */
 .divider {
-  width: 1px;                 /* 선 두께 */
-  background-color: white;    /* 선 색상 */
-  opacity: 1;                 /* 불투명도 */
-  height: 70vh;               /* 화면 높이의 70% */
-  align-self: center;         /* 수직 가운데 정렬 */
+  width: 1px;                 
+  background-color: white;    
+  opacity: 1;                 
+  height: 70vh;               
+  align-self: center;         
 }
 
 /* 이미지 드래그 방지 */
 img {
-  pointer-events: none;         /* 마우스 이벤트 무효화 */
-  user-drag: none;              /* 이미지 드래그 방지 */
-  -webkit-user-drag: none;      /* Safari용 */
+  pointer-events: none;         
+  user-drag: none;              
+  -webkit-user-drag: none;      
+}
+
+/* ===== 모바일 대응 미디어쿼리 ===== */
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;      /* 세로 정렬 */
+    width: 90vw;
+    min-width: auto;             /* 최소 너비 제한 해제 */
+    height: auto;                /* 높이 고정 해제 */
+    gap: 2rem;
+  }
+  .left, .right {
+    width: 100%;
+    text-align: center;
+  }
+  .divider {
+    width: 80%;                  /* 가로 구분선으로 변경 */
+    height: 1px;
+    margin: 1rem 0;
+  }
+  button {
+    width: 60%;
+    margin: 2rem auto 0 auto;
+    display: block;
+  }
 }
