@@ -146,7 +146,7 @@ button:hover {
   z-index: 1000;
 }
 
-.header-buttons button {
+.header-buttons {
   background-color: transparent;
   color: white;
   border: 1px solid white;
@@ -157,7 +157,7 @@ button:hover {
   transition: all 0.3s ease;
 }
 
-.header-buttons button:hover {
+.header-buttons:hover {
   background-color: white;
   color: #042550;
 }
