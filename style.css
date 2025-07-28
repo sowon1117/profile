@@ -136,26 +136,4 @@ body {
   color: #042550;
 }
 
-/* 🔹 반응형 (모바일 대응) */
-@media (max-width: 768px) {
-  .container {
-    flex-direction: column;
-    gap: 30px;
-  }
-
-  .divider {
-    width: 3px;
-    height: 200px;
-    margin: 0 auto;
-  }
-
-  .intro-header button {
-    padding: 5px 10px;
-    font-size: 0.75rem;
-  }
-
-  .profile-img {
-    width: 150px;
-    height: 200px;
-  }
-}
+/* 🔹 반응형 (모바일 대응) 삭제됨 */
