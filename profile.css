@@ -37,9 +37,10 @@ body {
 }
 
 /* 🔹 프로필 컨테이너: 좌우 영역 */
+/* 세로 중앙 정렬로 변경 */
 .profile-container {
   display: flex;
-  align-items: flex-start; /* 위쪽 정렬 */
+  align-items: center; /* flex-start → center */
   justify-content: center;
   width: 80%;
   max-width: 1000px;
@@ -53,11 +54,13 @@ body {
 }
 
 /* 🔹 왼쪽: 이미지 + 좌우명 */
+/* 세로 중앙 정렬 추가 */
 .profile-left {
   flex: 1.5;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center; /* 추가 */
   text-align: center;
   gap: 10px;
   box-sizing: border-box;
@@ -93,6 +96,7 @@ body {
 }
 
 /* 🔹 중앙 구분선 */
+/* 기본 세로선 스타일 유지 */
 .divider {
   width: 3px;
   background-color: white;
@@ -102,10 +106,16 @@ body {
   height: 250px; /* 이미지 높이에 맞춰 고정 */
 }
 
+/* 교내 수상 마지막 구분선만 숨기는 클래스 */
+.no-divider {
+  display: none;
+}
+
 /* 🔹 오른쪽: 이름, 닉네임, 메일 등 텍스트 영역 */
+/* 우측 영역 너비 늘리고 줄바꿈 문제 완화 */
 .profile-right {
   flex: 2;
-  max-width: 400px;
+  max-width: 500px; /* 400px → 500px */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -113,8 +123,10 @@ body {
   padding: 2rem 3rem;
   box-sizing: border-box;
   height: auto;
+  word-break: keep-all; /* 단어 중간 줄바꿈 방지 */
 }
 
+/* 이름 스타일 */
 .name {
   font-size: 2.5rem;
   margin-bottom: 1rem;
