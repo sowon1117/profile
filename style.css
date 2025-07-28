@@ -36,7 +36,7 @@ body {
 .intro-header button {
   background-color: transparent;
   color: white;
-  border: 2px solid white; /* 두꺼운 테두리 */
+  border: 1px solid white; /* 두꺼운 테두리 */
   padding: 8px 13px;       /* 버튼 크기 키움 */
   font-size: 0.9rem;        /* 폰트 크기 */
   cursor: pointer;
@@ -145,7 +145,7 @@ body {
 #moreBtn {
 background-color: transparent;
   color: white;
-  border: 2px solid white; /* 두꺼운 테두리 */
+  border: 1.3px solid white; /* 두꺼운 테두리 */
   padding: 8px 16px;       /* 버튼 크기 키움 */
   font-size: 0.95rem;        /* 폰트 크기 */
   cursor: pointer;
