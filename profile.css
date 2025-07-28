@@ -98,7 +98,7 @@ body {
 /* 🔹 중앙 구분선 */
 /* 기본 세로선 스타일 유지 */
 .divider {
-  width: 3px;
+  width: 1.5px;
   background-color: white;
   flex-shrink: 0;
   height: 450px; /* 이미지 높이에 맞춰 고정 */
