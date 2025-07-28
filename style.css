@@ -1,18 +1,20 @@
-@import url('https://fonts.googleapis.com/css2?family=Pretendard&display=swap');
-
-body {
+/* 전체 기본 설정 */
+* {
   margin: 0;
   padding: 0;
-  font-family: 'Pretendard', sans-serif;
-  background-color: #042550;
-  color: white;
-  scroll-behavior: smooth;
+  box-sizing: border-box;
 }
 
-/* 🔹 표지 영역 */
+body {
+  font-family: 'Pretendard-Regular', sans-serif;
+  background-color: #042550; /* 어두운 파란 배경 */
+  color: white;
+  overflow-x: hidden;
+}
+
+/* 🔹 표지 섹션 */
 #intro {
-  height: 100vh;
-  background-color: #042550;
+  height: 100vh; /* 화면 전체 높이 */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -20,104 +22,101 @@ body {
   position: relative;
 }
 
+/* 오른쪽 상단 버튼 */
 .intro-header {
   position: absolute;
   top: 20px;
-  right: 30px;
+  right: 20px;
 }
 
 .intro-header button {
   margin-left: 10px;
-  background-color: transparent;
-  color: white;
+  background: transparent;
   border: 1px solid white;
-  padding: 6px 12px;
+  color: white;
+  padding: 5px 10px;
   cursor: pointer;
-  border-radius: 5px;
 }
 
-.intro-header button:hover {
-  background-color: white;
-  color: #042550;
-}
-
-.intro-content {
-  text-align: center;
-}
-
+/* 가운데 텍스트 */
 .intro-content h1 {
   font-size: 2em;
-  margin-bottom: 0.5em;
+  margin-bottom: 10px;
 }
 
 .intro-content p {
   font-size: 1em;
-  opacity: 0.7;
+  color: #ccc;
 }
 
-/* 🔹 프로필 영역 */
+/* 🔹 메인 프로필 섹션 */
 #main {
-  background-color: #042550;
-  padding: 120px 20px 180px 20px; /* 상단, 하단 여백 넉넉하게 */
+  min-height: 100vh;
   display: flex;
+  align-items: center;
   justify-content: center;
+  background-color: #042550; /* 배경색 통일 */
+  padding: 100px 20px;
 }
 
+/* 프로필 전체 박스 */
 .container {
   display: flex;
+  align-items: center;
+  justify-content: center;
   max-width: 1000px;
   width: 100%;
-  align-items: center;
-  justify-content: space-between;
+  gap: 40px;
 }
 
+/* 왼쪽 영역 */
 .left {
   text-align: center;
-  flex: 1;
 }
 
 .left h1 {
-  font-size: 1.8em;
-  margin: 20px 0;
+  font-size: 2em;
+  margin-bottom: 20px;
 }
 
 .left span {
-  font-size: 0.9em;
-  opacity: 0.7;
-  display: block;
+  font-size: 0.8em;
+  color: #aaa;
 }
 
+/* 프로필 사진 스타일 */
 .profile-img {
   width: 200px;
-  height: 260px;
-  border-radius: 12px;
+  height: 200px;
   object-fit: cover;
-  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+  border-radius: 50%;
+  border: 5px solid white; /* 흰색 테두리 */
 }
 
+/* 구분선 스타일 */
 .divider {
-  width: 2px;
-  height: 300px;
+  width: 3px;             /* 두께 */
+  height: 80%;            /* 길이 더 길게 */
   background-color: white;
-  margin: 0 40px;
 }
 
+/* 오른쪽 텍스트 정보 */
 .right {
-  flex: 1;
-  line-height: 1.6;
+  max-width: 400px;
+  font-size: 1em;
+  line-height: 1.8;
 }
 
+.right strong {
+  color: #80cfff;
+}
+
+/* MORE 버튼 스타일 */
 #moreBtn {
-  margin-top: 30px;
-  background-color: white;
-  color: #042550;
-  border: none;
-  padding: 10px 20px;
-  font-weight: bold;
-  border-radius: 5px;
+  margin-top: 20px;
+  padding: 8px 16px;
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
   cursor: pointer;
-}
-
-#moreBtn:hover {
-  background-color: #ccc;
 }
