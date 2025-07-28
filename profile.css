@@ -132,6 +132,15 @@ button:hover {
   margin: 0.3rem 0 0.3rem 1rem;
 }
 
+/* 오른쪽 상단 버튼 영역 */
+.intro-header {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 15px; /* 버튼 사이 간격 */
+}
+
 .header buttons {
   background-color: transparent;
   color: white;
