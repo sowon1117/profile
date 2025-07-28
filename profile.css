@@ -6,7 +6,7 @@ body {
   color: white;
   font-family: 'Pretendard', sans-serif;
   user-select: none;
-  min-height: 100vh;   /* 100vh 대신 min-height로 스크롤 허용 */
+  height: 100vh;
   overflow-y: auto;
 }
 
@@ -15,26 +15,25 @@ body {
   display: flex;
   width: 80%;
   max-width: 1000px;
-  /* height: 100vh; */ /* 삭제 */
+  height: auto; /* 변경: 높이 자동으로 조절 */
   border-radius: 40px;
   margin: 40px auto; /* 위아래 여유 추가 */
-  overflow: visible;  /* 넘침 허용 */
-  align-items: flex-start;  /* 세로 위쪽 정렬 */
-
-  position: static; /* top, transform 제거 */
-  /* top: 50%; */
-  /* transform: translateY(-50%); */
+  overflow: visible; /* 변경: overflow hidden → visible */
+  align-items: flex-start; /* 변경: 위쪽 정렬 */
+  position: relative;
+  top: auto; /* 변경: top, transform 제거 */
+  transform: none;
 }
 
 /* 왼쪽 이미지 영역 */
 .profile-left {
   flex: 1.5;
   display: flex;
-  flex-direction: column; /* 세로 방향으로 변경 */
-  justify-content: flex-start; /* 위쪽 정렬 */
+  flex-direction: column; /* 변경: 세로 정렬 */
+  justify-content: flex-start;
   align-items: center;
   padding: 1rem;
-  height: auto; /* 100% -> auto */
+  height: auto; /* 변경: 높이 자동 */
 }
 
 .profile-img {
@@ -67,9 +66,10 @@ body {
 /* 구분선 */
 .divider {
   width: 1.5px;
-  height: 60%;
   background-color: white;
   flex-shrink: 0;
+  margin: 0 20px;
+  align-self: stretch; /* 변경: 부모 높이에 맞게 늘어나도록 */
 }
 
 /* 오른쪽 정보 영역 */
@@ -78,8 +78,8 @@ body {
   padding: 2rem 3rem;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* 위쪽 정렬 */
-  height: auto; /* 100% -> auto */
+  justify-content: flex-start; /* 변경: 위쪽 정렬 */
+  height: auto; /* 변경: 높이 자동 */
 }
 
 .name {
