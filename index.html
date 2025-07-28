@@ -8,16 +8,23 @@
 </head>
 <body>
 
-  <!-- 🔹 인트로(표지) 화면 -->
+  <!-- 🔹 표지 화면 -->
   <section id="intro">
+    <!-- 오른쪽 상단 메뉴 버튼 -->
+    <div class="intro-header">
+      <button>소개</button>
+      <button>프로젝트</button>
+      <button>연락처</button>
+    </div>
+
+    <!-- 중앙 텍스트 -->
     <div class="intro-content">
-      <h1>Welcome to My Portfolio</h1>
-      <p>꿈을 향해 나아가는 김소원의 여정</p>
-      <a href="#main" class="start-btn">시작하기</a>
+      <h1>함께 성장하는 개발자를 꿈꾸는 학생</h1>
+      <p>kimsowon portfolio.</p>
     </div>
   </section>
 
-  <!-- 🔹 실제 포트폴리오 본문 -->
+  <!-- 🔹 실제 프로필 화면 -->
   <section id="main">
     <div class="container">
       <!-- 왼쪽 영역 -->
@@ -50,7 +57,6 @@
     </div>
   </section>
 
-  <!-- 🔹 자바스크립트 (버튼 클릭 시 페이지 이동) -->
   <script>
     const btn = document.getElementById('moreBtn');
     btn.addEventListener('click', () => {
