@@ -1,4 +1,4 @@
-/* 전체 배경과 기본 설정 */
+/* 배경과 기본 설정 */
 body {
   margin: 0;
   padding: 0;
@@ -10,15 +10,20 @@ body {
   overflow-y: auto;
 }
 
+/* 중앙 정렬을 위한 컨테이너 */
 .profile-container {
   display: flex;
   width: 80%;
   max-width: 1000px;
-  height: 100vh;
+  height: auto;
   border-radius: 40px;
   margin: 0 auto;
   overflow: hidden;
   align-items: stretch;
+
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
 }
 
 /* 왼쪽 이미지 영역 */
@@ -49,7 +54,6 @@ body {
   background-color: white;
   flex-shrink: 0;
 }
-
 
 /* 오른쪽 정보 영역 */
 .profile-right {
@@ -82,7 +86,7 @@ ul li::before {
   color: #ccc;
 }
 
-/* 버튼 */
+/* 버튼 공통 스타일 */
 button {
   margin-top: 1vw;
   padding: 6px 12px;
@@ -93,14 +97,14 @@ button {
   border-radius: 6px;
   cursor: pointer;
   transition: all 0.3s ease;
-  width: 80px;          /* 원하는 가로 길이로 조정 */
-  min-width: 0;         /* 기본 최소 너비 해제 */
-  text-align: center;   /* 텍스트 가운데 정렬 */
+  width: 80px;
+  min-width: 0;
+  text-align: center;
 }
 
 button:hover {
-  background: white;           
-  color: black;                
+  background: white;
+  color: black;
 }
 
 /* 추가 정보 섹션 */
@@ -120,7 +124,7 @@ button:hover {
   margin-bottom: 0.3rem;
 }
 
-/* 영어 소제목 (예: in-school activities, an on-campus award 등) */
+/* 영어 소제목 */
 .school,
 .Award,
 .activities,
@@ -145,13 +149,9 @@ button:hover {
   margin: 0.3rem 0 0.3rem 1rem;
 }
 
-
-  padding-top: 100px;
-}
-
 /* ✅ 오른쪽 상단 버튼 고정 */
 .header-buttons {
-  position: fixed; /* 스크롤해도 고정됨 */
+  position: fixed;
   top: 20px;
   right: 20px;
   display: flex;
@@ -163,7 +163,7 @@ button:hover {
   background-color: transparent;
   color: white;
   border: 1px solid white;
-  padding: 6px 12px; /* 버튼 크기 조정 */
+  padding: 6px 12px;
   font-size: 0.8rem;
   cursor: pointer;
   border-radius: 6px;
