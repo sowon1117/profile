@@ -19,7 +19,7 @@ body {
   border-radius: 40px;
   margin: 0 auto;
   overflow: hidden;
-  align-items: stretch;
+  align-items: center;
 
   position: relative;
   top: 50%;
@@ -47,10 +47,10 @@ body {
   max-height: 100%;
 }
 
-/* 🔹 구분선 */
+/* 구분선 */
 .divider {
   width: 1.5px;
-  height: 450px;
+  height: 60%;
   background-color: white;
   flex-shrink: 0;
 }
