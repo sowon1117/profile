@@ -133,7 +133,7 @@ button:hover {
 }
 
 /* 오른쪽 상단 버튼 영역 */
-.intro-header {
+.header buttons {
   position: absolute;
   top: 20px;
   right: 20px;
