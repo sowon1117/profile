@@ -60,21 +60,27 @@
   <script>
   const menu = document.getElementById('menuButtons');
   const intro = document.getElementById('intro');
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const menu = document.getElementById('menuButtons');
+    const intro = document.getElementById('intro');
+    const btn = document.getElementById('moreBtn');
 
-  window.addEventListener('scroll', () => {
-    const introBottom = intro.getBoundingClientRect().bottom;
-    if (introBottom <= 0) {
-      menu.style.display = 'none';
-    } else {
-      menu.style.display = 'flex';
-    }
-  });
+    window.addEventListener('scroll', () => {
+      const introBottom = intro.getBoundingClientRect().bottom;
+      if (introBottom <= 0) {
+        menu.style.display = 'none';
+      } else {
+        menu.style.display = 'flex';
+      }
+    });
 
-  const btn = document.getElementById('moreBtn');
-  btn.addEventListener('click', () => {
-    window.location.href = 'profile.html';
+    btn.addEventListener('click', () => {
+      window.location.href = 'profile.html';
+    });
   });
 </script>
+
 
 </body>
 </html>
