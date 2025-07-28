@@ -101,7 +101,6 @@ body {
   width: 3px;
   background-color: white;
   flex-shrink: 0;
-  align-self: stretch; /* 부모 높이에 맞게 늘어나도록 */
   height: 450px; /* 이미지 높이에 맞춰 고정 */
 }
 
