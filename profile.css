@@ -49,8 +49,8 @@ body {
 
 /* 🔹 구분선 */
 .divider {
-  width: 3px;
-  height: 350px;
+  width: 1.5px;
+  height: 450px;
   background-color: white;
   flex-shrink: 0;
 }
