@@ -155,6 +155,7 @@ background-color: transparent;
 
 #moreBtn:hover {
   background-color: white;
+  color: black; 
 }
 
 /* ===== 반응형 (모바일, 태블릿) ===== */
