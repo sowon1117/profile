@@ -1,216 +1,162 @@
-@import url('https://fonts.googleapis.com/css2?family=Pretendard&display=swap');
-
-/* 기본 스타일 */
+/* ✅ 기본 설정 */
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Pretendard', sans-serif;
+  font-family: 'Pretendard-Regular', sans-serif;
   background-color: #042550;
   color: white;
-  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
-/* 🔹 표지 영역 */
+/* 🔹 표지 section 전체 */
 #intro {
-  height: 100vh; /* 화면 전체 높이 */
-  background-color: #042550;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
-  padding: 20px;
-  box-sizing: border-box;
 }
 
-/* 오른쪽 상단 버튼 영역 */
+/* ✅ 오른쪽 상단 버튼 고정 */
 .intro-header {
-  position: absolute;
+  position: fixed; /* 스크롤해도 고정됨 */
   top: 20px;
   right: 20px;
   display: flex;
-  gap: 15px; /* 버튼 사이 간격 */
+  gap: 10px;
+  z-index: 1000;
 }
 
-/* 표지 버튼 스타일 */
 .intro-header button {
   background-color: transparent;
   color: white;
-  border: 1px solid white; /* 두꺼운 테두리 */
-  padding: 8px 13px;       /* 버튼 크기 키움 */
-  font-size: 0.9rem;        /* 폰트 크기 */
+  border: 1px solid white;
+  padding: 6px 12px; /* 버튼 크기 조정 */
+  font-size: 0.8rem;
   cursor: pointer;
   border-radius: 6px;
   transition: all 0.3s ease;
 }
 
-/* 버튼 호버 효과 */
 .intro-header button:hover {
   background-color: white;
   color: #042550;
 }
 
-/* 가운데 텍스트 영역 */
+/* 🔹 표지 중앙 텍스트 */
 .intro-content {
   text-align: center;
-  max-width: 90vw;
 }
 
 .intro-content h1 {
-  font-size: clamp(1.8rem, 4vw, 2.5rem); /* 반응형 글자 크기 */
-  margin-bottom: 0.5em;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
 }
 
 .intro-content p {
-  font-size: clamp(1rem, 2vw, 1.2rem);
-  opacity: 0.7;
+  font-size: 1.2rem;
+  color: #ccc;
 }
 
-/* 🔹 프로필 영역 */
+/* 🔹 메인 섹션 */
 #main {
-  background-color: #042550;
-  padding: 100px 20px 150px 20px; /* 넉넉한 상하 여백 */
+  padding: 80px 20px;
   display: flex;
   justify-content: center;
-  box-sizing: border-box;
 }
 
-/* 컨테이너 : 좌우 영역 포함 */
+/* 🔹 메인 컨테이너: 좌우 영역 */
 .container {
   display: flex;
-  max-width: 1000px;
-  width: 100%;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   gap: 40px;
-  flex-wrap: wrap; /* 작은 화면에서 줄바꿈 허용 */
+  flex-wrap: wrap;
 }
 
-/* 왼쪽 영역 (사진, 이름) */
+/* 🔹 왼쪽 프로필 */
 .left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
-  flex: 1 1 300px; /* 최소 300px, 공간 따라 늘어남 */
-  min-width: 280px;
 }
 
-/* 이름 텍스트 */
 .left h1 {
-  font-size: clamp(1.6rem, 3vw, 2.2rem);
-  margin: 20px 0;
+  font-size: 2rem;
+  margin-bottom: 20px;
 }
 
-/* 보조 텍스트 (닉네임 등) */
-.left span {
-  font-size: clamp(0.85rem, 1.8vw, 1rem);
-  opacity: 0.7;
+.left h1 span {
+  font-size: 1rem;
+  color: #aaa;
   display: block;
 }
 
-/* 프로필 사진 */
 .profile-img {
-  width: 100%;
-  max-width: 220px;
-  height: auto;
-  border-radius: 12px;
+  width: 200px;
+  height: 250px;
   object-fit: cover;
-  box-shadow: 0 0 15px rgba(0,0,0,0.4);
-  border: 3px solid white; /* 흰 테두리 */
-  margin: 0 auto;
+  border-radius: 12px;
+  border: 2px solid white;
 }
 
-/* 좌우 구분선 */
+/* 🔹 오른쪽 텍스트 영역 */
+.right {
+  max-width: 400px;
+  line-height: 1.8;
+}
+
+.right strong {
+  color: #ffd700;
+}
+
+/* 🔹 구분선 */
 .divider {
   width: 3px;
   height: 350px;
   background-color: white;
-  margin: 0 20px;
-
-  /* 작은 화면에서는 가로 선으로 변경 */
   flex-shrink: 0;
 }
 
-/* 오른쪽 영역 (정보 텍스트) */
-.right {
-  flex: 2 1 400px; /* 최소 400px, 공간 따라 늘어남 */
-  line-height: 1.6;
-  min-width: 280px;
-}
-
-/* 강조 텍스트 */
-.right strong {
-  color: #white;
-}
-
-/* MORE 버튼 */
+/* 🔹 MORE 버튼 */
 #moreBtn {
-background-color: transparent;
+  margin-top: 30px;
+  padding: 8px 16px;
+  background-color: transparent;
   color: white;
-  border: 1.3px solid white; /* 두꺼운 테두리 */
-  padding: 8px 16px;       /* 버튼 크기 키움 */
-  font-size: 0.95rem;        /* 폰트 크기 */
+  border: 1px solid white;
+  border-radius: 6px;
   cursor: pointer;
-  border-radius: 5px;
   transition: all 0.3s ease;
 }
 
 #moreBtn:hover {
   background-color: white;
-  color: black; 
+  color: #042550;
 }
 
-/* ===== 반응형 (모바일, 태블릿) ===== */
-@media (max-width: 900px) {
+/* 🔹 반응형 (모바일 대응) */
+@media (max-width: 768px) {
   .container {
     flex-direction: column;
     gap: 30px;
   }
-  
-@media (max-width: 600px) {
-  .intro-header button,
-  #moreBtn {
-    padding: 6px 12px;
-    font-size: 0.8rem;
-  }
-}
 
   .divider {
-    width: 80%;
-    height: 3px;
-    margin: 20px auto;
+    width: 3px;         /* 여전히 세로선 유지 */
+    height: 200px;
+    margin: 0 auto;
   }
 
-  .left, .right {
-    flex: none;
-    width: 100%;
-    min-width: auto;
-  }
-
-  /* 프로필 사진 크기 줄이기 */
-  .profile-img {
-    max-width: 180px;
-  }
-}
-
-@media (max-width: 400px) {
-  /* 표지 버튼 작게 */
   .intro-header button {
-    padding: 8px 16px;
-    font-size: 0.9rem;
-    border-width: 1.5px;
+    padding: 5px 10px;
+    font-size: 0.75rem;
   }
 
-  /* 버튼 크기 약간 더 작게 */
-  #moreBtn {
-    padding: 10px 20px;
-    font-size: 1rem;
-  }
-
-  /* 제목과 부제목 글자 크기 조절 */
-  .intro-content h1 {
-    font-size: 1.5rem;
-  }
-
-  .intro-content p {
-    font-size: 0.9rem;
+  .profile-img {
+    width: 150px;
+    height: 200px;
   }
 }
