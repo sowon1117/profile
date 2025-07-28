@@ -34,7 +34,7 @@ body {
   color: #042550;
 }
 
-/* 🔹 표지 section 전체 */
+/* 🔹 표지 section */
 #intro {
   height: 100vh;
   display: flex;
@@ -65,21 +65,23 @@ body {
   justify-content: center;
 }
 
-/* 🔹 메인 컨테이너: 좌우 영역 */
+/* 🔹 메인 컨테이너 */
 .container {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center; /* 좌우 높이 정렬 중심 */
   gap: 40px;
   flex-wrap: wrap;
 }
 
-/* 🔹 왼쪽 프로필 */
+/* 🔹 왼쪽 프로필 영역 */
 .left {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  min-height: 450px; /* 오른쪽과 맞추기 위해 높이 지정 */
+  justify-content: center;
 }
 
 .left h1 {
@@ -105,6 +107,10 @@ body {
 .right {
   max-width: 400px;
   line-height: 1.8;
+  min-height: 450px; /* 왼쪽과 동일 높이 */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .right strong {
@@ -135,5 +141,3 @@ body {
   background-color: white;
   color: #042550;
 }
-
-/* 🔹 반응형 (모바일 대응) 삭제됨 */
