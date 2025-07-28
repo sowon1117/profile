@@ -138,7 +138,7 @@ button:hover {
 
 /* ✅ 오른쪽 상단 버튼 고정 */
 .header-buttons {
-  position: fixed; /* 스크롤해도 고정됨 */
+  position: fixed;          /* 스크롤해도 고정됨 */
   top: 20px;
   right: 20px;
   display: flex;
@@ -146,18 +146,20 @@ button:hover {
   z-index: 1000;
 }
 
-.header-buttons {
+/* 버튼 스타일 (올바른 선택자) */
+.header-buttons button {
   background-color: transparent;
   color: white;
   border: 1px solid white;
-  padding: 6px 12px; /* 버튼 크기 조정 */
-  font-size: 0.8rem;
+  padding: 4px 10px;        /* 👉 더 작게: 버튼 가로 길이 줄임 */
+  font-size: 0.75rem;
   cursor: pointer;
   border-radius: 6px;
   transition: all 0.3s ease;
 }
 
-.header-buttons:hover {
+.header-buttons button:hover {
   background-color: white;
   color: #042550;
 }
+
