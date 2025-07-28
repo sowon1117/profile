@@ -23,6 +23,21 @@ body {
   gap: 1rem;
 }
 
+/* ✅ 가운데 세로 구분선 */
+.divider {
+  width: 2px;
+  background-color: white;
+  margin: 0 20px;
+}
+
+/* ✅ 가로 구분선 */
+.horizontal-divider {
+  border: 0;
+  border-top: 1px solid white;
+  margin: 2rem 0;
+}
+
+
 /* ✅ 왼쪽/오른쪽 영역 */
 .profile-left,
 .profile-right {
