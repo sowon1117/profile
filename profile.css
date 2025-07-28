@@ -102,8 +102,7 @@ body {
   background-color: white;
   flex-shrink: 0;
   align-self: stretch; /* 부모 높이에 맞게 늘어나도록 */
-  margin: 0 20px;
-  height: 250px; /* 이미지 높이에 맞춰 고정 */
+  height: 450px; /* 이미지 높이에 맞춰 고정 */
 }
 
 /* 교내 수상 마지막 구분선만 숨기는 클래스 */
