@@ -136,22 +136,25 @@ button:hover {
   margin: 0.3rem 0 0.3rem 1rem;
 }
 
-/* ✅ 오른쪽 상단 고정 버튼 */
+
+  padding-top: 100px;
+}
+/* ✅ 오른쪽 상단 버튼 고정 및 버튼 스타일 */
 .header-buttons {
-  position: fixed;   /* 꼭 이걸 써야 고정됨 */
+  position: fixed;          /* ✅ 스크롤해도 고정 */
   top: 20px;
   right: 20px;
   display: flex;
   gap: 10px;
-  z-index: 9999;
+  z-index: 1000;
 }
 
 .header-buttons button {
   background-color: transparent;
   color: white;
   border: 1px solid white;
-  padding: 6px 12px;
-  font-size: 0.8rem;
+  padding: 4px 10px;         /* ✅ 버튼 가로 길이 줄임 */
+  font-size: 0.75rem;
   cursor: pointer;
   border-radius: 6px;
   transition: all 0.3s ease;
@@ -160,9 +163,4 @@ button:hover {
 .header-buttons button:hover {
   background-color: white;
   color: #042550;
-}
-
-/* ✅ 콘텐츠 영역 여백 (버튼 가리는 것 방지) */
-.profile-container {
-  padding-top: 100px;
 }
