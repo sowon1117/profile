@@ -34,7 +34,7 @@ body {
 .profile-img {
   width: 80%;
   max-width: 250px;
-  border-radius: 40%;
+  border-radius: 20%;
   border: 2px solid white;
   pointer-events: none;
   user-drag: none;
