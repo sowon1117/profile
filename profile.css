@@ -132,17 +132,16 @@ button:hover {
   margin: 0.3rem 0 0.3rem 1rem;
 }
 
-/* 🔹 오른쪽 상단 고정 버튼 묶음 */
 .header-buttons {
-  position: fixed;     /* 화면에 고정 */
+  position: fixed;       /* 꼭 필요 */
   top: 20px;
   right: 20px;
-  z-index: 1000;
-  display: flex;       /* 버튼들을 가로로 나열 */
-  gap: 10px;           /* 버튼 간 간격 */
+  z-index: 9999;          /* 어떤 요소보다 위에 뜨도록 */
+  display: flex;
+  gap: 10px;
 }
 
-/* 🔸 개별 버튼 스타일 */
+/* 버튼 디자인 */
 .header-buttons .top-btn {
   background-color: transparent;
   color: white;
@@ -154,7 +153,6 @@ button:hover {
   transition: all 0.3s ease;
 }
 
-/* 🔸 마우스 호버 시 효과 */
 .header-buttons .top-btn:hover {
   background-color: white;
   color: #042550;
