@@ -141,6 +141,14 @@ button:hover {
 }
 
 .header-buttons button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 15px; /* 버튼 사이 간격 */
+}
+
+.header-buttons button {
   margin-left: 10px;
   background-color: transparent;
   color: white;
