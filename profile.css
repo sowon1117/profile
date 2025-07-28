@@ -10,64 +10,65 @@ body {
   overflow-y: auto;
 }
 
+/* 프로필 전체 컨테이너 */
 .profile-container {
   display: flex;
   width: 80%;
   max-width: 1000px;
-  height: 100vh;
+  height: auto;
   border-radius: 40px;
-  margin: 0 auto;
+  margin: 40px auto;
   overflow: hidden;
-  align-items: stretch;
+  align-items: flex-start;
+  background-color: #042550;
+  border: 1px solid white;
+  padding: 2rem;
+  gap: 2rem;
 }
 
 /* 왼쪽 이미지 영역 */
 .profile-left {
-  flex: 1.5;
+  flex: 1;
   display: flex;
   justify-content: center;
-  align-items: center;
-  padding: 1rem;
-  height: 100%;
+  align-items: flex-start;
 }
 
 .profile-img {
-  width: 80%;
+  width: 100%;
   max-width: 250px;
   border-radius: 20%;
   border: 2px solid white;
   pointer-events: none;
   user-drag: none;
   height: auto;
-  max-height: 100%;
 }
 
-/* 🔹 구분선 */
+/* 가운데 흰색 구분선 */
 .divider {
-  width: 3px;
-  height: 350px;
+  width: 2px;
   background-color: white;
-  flex-shrink: 0;
+  height: 100%;
 }
 
 /* 오른쪽 정보 영역 */
 .profile-right {
   flex: 2;
-  padding: 2rem 3rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  height: 100%;
+  justify-content: flex-start;
+  gap: 0.6rem;
+  padding-top: 1rem;
 }
 
 .name {
   font-size: 2.5rem;
-  margin-bottom: 1rem;
+  font-weight: bold;
 }
 
-.name span {
+.profile-detail {
   font-size: 1.2rem;
-  color: #888;
+  color: #ccc;
 }
 
 /* 리스트 기본 스타일 */
@@ -81,41 +82,31 @@ ul li::before {
   color: #ccc;
 }
 
-/* 버튼 */
-button {
-  margin-top: 2vw;
-  padding: 0.7em 1.6em;
-  font-size: clamp(14px, 1.2vw, 18px);
-  background: transparent;
-  color: white;
-  border: 1px solid white;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-button:hover {
-  background: white;           
-  color: black;                
-}
-
-/* 추가 정보 섹션 */
+/* 추가 정보 섹션 (아래쪽 콘텐츠) */
 .additional-info {
   max-width: 1000px;
-  margin: 0 auto 60px auto;
+  margin: 30px auto 60px auto;
   padding: 2rem;
   color: white;
 }
 
-/* 각 큰 제목 (교내 수상 등) */
+/* 각 제목(교내 활동, 수상 등) */
 .additional-info h2 {
   font-size: 1.8rem;
   border-bottom: 2px solid white;
   padding-bottom: 0.5rem;
   margin-top: 2rem;
-  margin-bottom: 0.3rem;
+  margin-bottom: 1rem;
+  position: relative;
 }
 
-/* 영어 소제목 (예: in-school activities, an on-campus award 등) */
+/* 각 영역 사이의 구분선 */
+.section-divider {
+  border-top: 1px solid #ccc;
+  margin: 2rem 0;
+}
+
+/* 영어 소제목 */
 .school,
 .Award,
 .activities,
@@ -140,9 +131,26 @@ button:hover {
   margin: 0.3rem 0 0.3rem 1rem;
 }
 
-/* ✅ 오른쪽 상단 버튼 고정 */
+/* 버튼 기본 */
+button {
+  margin-top: 2vw;
+  padding: 0.7em 1.6em;
+  font-size: clamp(14px, 1.2vw, 18px);
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+button:hover {
+  background: white;
+  color: black;
+}
+
+/* 오른쪽 상단 버튼 고정 */
 .header-buttons {
-  position: fixed; /* 스크롤해도 고정됨 */
+  position: fixed;
   top: 20px;
   right: 20px;
   display: flex;
@@ -154,7 +162,7 @@ button:hover {
   background-color: transparent;
   color: white;
   border: 1px solid white;
-  padding: 6px 12px; /* 버튼 크기 조정 */
+  padding: 6px 12px;
   font-size: 0.8rem;
   cursor: pointer;
   border-radius: 6px;
