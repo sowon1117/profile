@@ -9,11 +9,11 @@
 <body>
 
   <!-- ✅ 오른쪽 상단 고정 버튼 -->
-  <div class="intro-header">
-    <button>MAIN</button>
-    <button>PROFILE</button>
-    <button>PROJECT</button>
-  </div>
+ <div class="intro-header" id="menuButtons">
+  <button>MAIN</button>
+  <button>PROFILE</button>
+  <button>PROJECT</button>
+</div>
 
   <!-- 🔹 표지 화면 -->
   <section id="intro">
@@ -58,11 +58,23 @@
   </section>
 
   <script>
-    const btn = document.getElementById('moreBtn');
-    btn.addEventListener('click', () => {
-      window.location.href = 'profile.html';
-    });
-  </script>
+  const menu = document.getElementById('menuButtons');
+  const intro = document.getElementById('intro');
+
+  window.addEventListener('scroll', () => {
+    const introBottom = intro.getBoundingClientRect().bottom;
+    if (introBottom <= 0) {
+      menu.style.display = 'none';
+    } else {
+      menu.style.display = 'flex';
+    }
+  });
+
+  const btn = document.getElementById('moreBtn');
+  btn.addEventListener('click', () => {
+    window.location.href = 'profile.html';
+  });
+</script>
 
 </body>
 </html>
