@@ -154,7 +154,9 @@ background-color: transparent;
 }
 
 #moreBtn:hover {
-  background-color: #ccc;
+  background-color: white;
+  color: #042550;
+}
 }
 
 /* ===== 반응형 (모바일, 태블릿) ===== */
