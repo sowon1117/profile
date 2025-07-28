@@ -15,25 +15,26 @@ body {
   display: flex;
   width: 80%;
   max-width: 1000px;
-  height: auto; /* 변경: 높이 자동으로 조절 */
+  height: auto;
   border-radius: 40px;
-  margin: 40px auto; /* 위아래 여유 추가 */
-  overflow: visible; /* 변경: overflow hidden → visible */
-  align-items: flex-start; /* 변경: 위쪽 정렬 */
+  margin: 40px auto;
+  overflow: visible;
+  align-items: flex-start;
   position: relative;
-  top: auto; /* 변경: top, transform 제거 */
+  top: auto;
   transform: none;
 }
 
-/* 왼쪽 이미지 영역 */
+/* 왼쪽 이미지 + 좌우명 영역 */
 .profile-left {
   flex: 1.5;
   display: flex;
-  flex-direction: column; /* 변경: 세로 정렬 */
+  flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   padding: 1rem;
-  height: auto; /* 변경: 높이 자동 */
+  height: auto;
+  box-sizing: border-box;
 }
 
 .profile-img {
@@ -45,15 +46,17 @@ body {
   user-drag: none;
   height: auto;
   max-height: 100%;
+  display: block;
+  margin-bottom: 10px;
 }
 
-.motto, .motto-kr {
-  margin-top: 10px;
+.motto {
   font-style: italic;
   font-weight: 500;
   font-size: 14px;
   color: #ddd;
   text-align: center;
+  margin: 0;
 }
 
 .motto-kr {
@@ -61,6 +64,8 @@ body {
   font-weight: 600;
   font-size: 15px;
   color: #f0f0f0;
+  text-align: center;
+  margin-top: 4px;
 }
 
 /* 구분선 */
@@ -69,7 +74,7 @@ body {
   background-color: white;
   flex-shrink: 0;
   margin: 0 20px;
-  align-self: stretch; /* 변경: 부모 높이에 맞게 늘어나도록 */
+  align-self: stretch;
 }
 
 /* 오른쪽 정보 영역 */
@@ -78,8 +83,9 @@ body {
   padding: 2rem 3rem;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* 변경: 위쪽 정렬 */
-  height: auto; /* 변경: 높이 자동 */
+  justify-content: flex-start;
+  height: auto;
+  box-sizing: border-box;
 }
 
 .name {
@@ -130,7 +136,7 @@ button:hover {
   margin: 0 auto;
   padding: 2rem;
   color: white;
-  margin-top: 60px; /* profile-container 바로 아래 위치 */
+  margin-top: 60px;
 }
 
 /* 각 큰 제목 (교내 수상 등) */
@@ -167,7 +173,7 @@ button:hover {
   margin: 0.3rem 0 0.3rem 1rem;
 }
 
-/* ✅ 오른쪽 상단 버튼 고정 */
+/* 오른쪽 상단 버튼 고정 */
 .header-buttons {
   position: fixed;
   top: 20px;
