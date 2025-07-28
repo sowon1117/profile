@@ -112,7 +112,7 @@ body {
 /* 🔹 좌우 구분선 스타일 */
 .divider {
   width: 2px;  /* 선 두께 */
-  height: 440px;  /* 선 높이 */
+  height: 500px;  /* 선 높이 */
   background-color: white;
   margin: 0 40px;  /* 양쪽 여백 */
 }
