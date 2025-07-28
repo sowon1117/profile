@@ -1,4 +1,46 @@
-/* body 기본 스타일 */
+/* ===== 인트로(표지) 화면 스타일 ===== */
+#intro {
+  height: 100vh;
+  background-color: #042550;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  padding: 0 20px;
+}
+
+#intro h1 {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+#intro p {
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.start-btn {
+  padding: 12px 30px;
+  background-color: white;
+  color: #042550;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.3s;
+}
+
+.start-btn:hover {
+  background-color: #f0f0f0;
+}
+
+/* 부드러운 스크롤 이동 */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ===== body 기본 스타일 ===== */
 body {
   margin: 0;                          
   padding: 0;                         
@@ -8,20 +50,20 @@ body {
   display: flex;                     
   justify-content: center;           
   align-items: center;               
-  height: 100vh;                    
-  overflow: hidden;                 
+  height: auto;                     
+  overflow: auto;                 
   user-select: none;                
   -webkit-user-select: none;       
   -moz-user-select: none;          
   -ms-user-select: none;           
 }
 
-/* html과 body에 스크롤 완전 차단 및 높이 100% 설정 */
+/* html과 body 높이 설정 */
 html, body {
   margin: 0;
   padding: 0;
-  overflow: hidden;                
-  height: 100%;
+  overflow: auto;                
+  height: auto;
 }
 
 /* 전체 콘텐츠를 감싸는 박스 */
@@ -32,7 +74,7 @@ html, body {
   justify-content: space-between;  
   width: 80vw;                    
   max-width: 1000px;              
-  min-width: 600px;               /* PC 이상 화면용 최소너비 */
+  min-width: 600px;               
   gap: 4vw;                      
   min-height: 400px;   
   height: auto;
@@ -47,22 +89,22 @@ html, body {
 
 /* 제목 크기 키우기 */
 .left h1 {
-  font-size: clamp(28px, 4vw, 48px);  /* 기존 20~36px에서 키움 */
+  font-size: clamp(28px, 4vw, 48px);
 }
 
 .left h1 span {
-  color: #aaa;                  
-  font-size: clamp(18px, 2vw, 24px); /* 기존 14~20px에서 키움 */
-  margin-left: 0.5vw;          
+  color: #aaa;
+  font-size: clamp(18px, 2vw, 24px);
+  margin-left: 0.5vw;
 }
 
 .profile-img {
-  width: 100%;                 
-  max-width: 220px;            
-  border-radius: 40px;         
-  object-fit: cover;           
-  margin-top: 2vw;             
-  box-shadow: 0 0 1vw rgba(0, 0, 0, 0.5); 
+  width: 100%;
+  max-width: 220px;
+  border-radius: 40px;
+  object-fit: cover;
+  margin-top: 2vw;
+  box-shadow: 0 0 1vw rgba(0, 0, 0, 0.5);
   border: 2px solid white;
   pointer-events: none;
   user-drag: none;
@@ -71,79 +113,82 @@ html, body {
 
 /* 오른쪽 영역 */
 .right {
-  width: 55%;                 
-  display: flex;              
-  flex-direction: column;     
-  gap: 1vw;                   
+  width: 55%;
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
 }
 
 /* 본문 글씨 키우기 */
 .right p {
-  font-size: clamp(18px, 2vw, 22px); /* 기존 14~18px에서 키움 */
-  line-height: 1.6;           
-  margin: 0;                  
+  font-size: clamp(18px, 2vw, 22px);
+  line-height: 1.6;
+  margin: 0;
 }
 
-/* 강조 텍스트 크기 키우기 */
+/* 강조 텍스트 */
 .right strong {
-  color: #aaa;               
-  font-size: clamp(16px, 1.5vw, 20px); /* 기존 13~16px에서 키움 */
-  display: block;            
-  margin-bottom: 0.3em;      
+  color: #aaa;
+  font-size: clamp(16px, 1.5vw, 20px);
+  display: block;
+  margin-bottom: 0.3em;
 }
 
 /* 공통 버튼 스타일 */
 button {
-  margin-top: 2vw;             
-  padding: 0.7em 1.6em;        /* 약간 패딩 키움 */
-  font-size: clamp(18px, 2vw, 22px); /* 기존 14~18px에서 키움 */
-  background: transparent;     
-  color: white;                
-  border: 1px solid white;     
-  border-radius: 8px;          
-  cursor: pointer;             
-  transition: background 0.3s; 
+  margin-top: 2vw;
+  padding: 0.7em 1.6em;
+  font-size: clamp(18px, 2vw, 22px);
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
 }
 
 button:hover {
-  background: white;           
-  color: black;                
+  background: white;
+  color: black;
 }
 
 /* 가운데 구분선 */
 .divider {
-  width: 1px;                 
-  background-color: white;    
-  opacity: 1;                 
-  height: 70vh;               
-  align-self: center;         
+  width: 1px;
+  background-color: white;
+  opacity: 1;
+  height: 70vh;
+  align-self: center;
 }
 
 /* 이미지 드래그 방지 */
 img {
-  pointer-events: none;         
-  user-drag: none;              
-  -webkit-user-drag: none;      
+  pointer-events: none;
+  user-drag: none;
+  -webkit-user-drag: none;
 }
 
 /* ===== 모바일 대응 미디어쿼리 ===== */
 @media (max-width: 600px) {
   .container {
-    flex-direction: column;      /* 세로 정렬 */
+    flex-direction: column;
     width: 90vw;
-    min-width: auto;             /* 최소 너비 제한 해제 */
-    height: auto;                /* 높이 고정 해제 */
+    min-width: auto;
+    height: auto;
     gap: 2rem;
   }
+
   .left, .right {
     width: 100%;
     text-align: center;
   }
+
   .divider {
-    width: 80%;                  /* 가로 구분선으로 변경 */
+    width: 80%;
     height: 1px;
     margin: 1rem 0;
   }
+
   button {
     width: 60%;
     margin: 2rem auto 0 auto;
