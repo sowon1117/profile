@@ -1,38 +1,52 @@
-/* ===== 인트로(표지) 화면 스타일 ===== */
+/* ===== 표지 화면 (인트로) 스타일 ===== */
 #intro {
   height: 100vh;
   background-color: #042550;
   color: white;
+  position: relative;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
   text-align: center;
-  padding: 0 20px;
+  padding: 40px 20px;
+  box-sizing: border-box;
 }
 
-#intro h1 {
-  font-size: 48px;
+/* 오른쪽 상단 버튼 3개 */
+.intro-header {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  display: flex;
+  gap: 10px;
+}
+
+.intro-header button {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.intro-header button:hover {
+  background-color: white;
+  color: #042550;
+}
+
+/* 중앙 문구 */
+.intro-content h1 {
+  font-size: clamp(26px, 4vw, 40px);
   margin-bottom: 10px;
 }
 
-#intro p {
-  font-size: 20px;
-  margin-bottom: 30px;
-}
-
-.start-btn {
-  padding: 12px 30px;
-  background-color: white;
-  color: #042550;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 8px;
-  transition: background-color 0.3s;
-}
-
-.start-btn:hover {
-  background-color: #f0f0f0;
+.intro-content p {
+  font-size: clamp(14px, 1.8vw, 18px);
+  color: #ccc;
 }
 
 /* 부드러운 스크롤 이동 */
@@ -40,54 +54,54 @@ html {
   scroll-behavior: smooth;
 }
 
-/* ===== body 기본 스타일 ===== */
+/* ===== 본문 시작 (기존 스타일 유지) ===== */
 body {
-  margin: 0;                          
-  padding: 0;                         
-  font-family: 'Pretendard-Regular', sans-serif;  
-  background-color: #042550;         
-  color: white;                      
-  display: flex;                     
-  justify-content: center;           
-  align-items: center;               
-  height: auto;                     
-  overflow: auto;                 
-  user-select: none;                
-  -webkit-user-select: none;       
-  -moz-user-select: none;          
-  -ms-user-select: none;           
+  margin: 0;
+  padding: 0;
+  font-family: 'Pretendard-Regular', sans-serif;
+  background-color: #042550;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+  overflow: auto;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
 }
 
-/* html과 body 높이 설정 */
 html, body {
   margin: 0;
   padding: 0;
-  overflow: auto;                
+  overflow: auto;
   height: auto;
 }
 
-/* 전체 콘텐츠를 감싸는 박스 */
+/* 포트폴리오 본문 영역 */
 .container {
-  display: flex;                   
-  flex-direction: row;             
-  align-items: center;             
-  justify-content: space-between;  
-  width: 80vw;                    
-  max-width: 1000px;              
-  min-width: 600px;               
-  gap: 4vw;                      
-  min-height: 400px;   
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 80vw;
+  max-width: 1000px;
+  min-width: 600px;
+  gap: 4vw;
+  min-height: 400px;
   height: auto;
-  background-color: #042550;     
+  background-color: #042550;
+  margin-top: 100px;
 }
 
 /* 왼쪽 영역 */
 .left {
-  text-align: center;             
-  width: 40%;                    
+  text-align: center;
+  width: 40%;
 }
 
-/* 제목 크기 키우기 */
 .left h1 {
   font-size: clamp(28px, 4vw, 48px);
 }
@@ -119,14 +133,12 @@ html, body {
   gap: 1vw;
 }
 
-/* 본문 글씨 키우기 */
 .right p {
   font-size: clamp(18px, 2vw, 22px);
   line-height: 1.6;
   margin: 0;
 }
 
-/* 강조 텍스트 */
 .right strong {
   color: #aaa;
   font-size: clamp(16px, 1.5vw, 20px);
@@ -134,7 +146,7 @@ html, body {
   margin-bottom: 0.3em;
 }
 
-/* 공통 버튼 스타일 */
+/* 공통 버튼 */
 button {
   margin-top: 2vw;
   padding: 0.7em 1.6em;
@@ -168,7 +180,7 @@ img {
   -webkit-user-drag: none;
 }
 
-/* ===== 모바일 대응 미디어쿼리 ===== */
+/* ===== 모바일 대응 ===== */
 @media (max-width: 600px) {
   .container {
     flex-direction: column;
@@ -176,6 +188,7 @@ img {
     min-width: auto;
     height: auto;
     gap: 2rem;
+    margin-top: 50px;
   }
 
   .left, .right {
@@ -193,5 +206,21 @@ img {
     width: 60%;
     margin: 2rem auto 0 auto;
     display: block;
+  }
+
+  .intro-header {
+    top: 10px;
+    right: 10px;
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .intro-header button {
+    font-size: 12px;
+    padding: 5px 10px;
+  }
+
+  .intro-content h1 {
+    font-size: 22px;
   }
 }
