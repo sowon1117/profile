@@ -42,6 +42,14 @@ body {
   max-height: 100%;
 }
 
+/* 🔹 구분선 */
+.divider {
+  width: 3px;
+  height: 350px;
+  background-color: white;
+  flex-shrink: 0;
+}
+
 /* 오른쪽 정보 영역 */
 .profile-right {
   flex: 2;
