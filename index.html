@@ -1,48 +1,62 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>https://wlsl.sowon/profile</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>https://wlsl.sowon/profile</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-     <div class="container">
-    <div class="left">
-      <h1>프로필 <span>PROFILE</span></h1>
-      <img src="image/증사.jpg" alt="프로필 사진" class="profile-img">
+
+  <!-- 🔹 인트로(표지) 화면 -->
+  <section id="intro">
+    <div class="intro-content">
+      <h1>Welcome to My Portfolio</h1>
+      <p>꿈을 향해 나아가는 김소원의 여정</p>
+      <a href="#main" class="start-btn">시작하기</a>
     </div>
+  </section>
 
-    <div class="divider"></div> <!-- ← 구분선 추가 -->
+  <!-- 🔹 실제 포트폴리오 본문 -->
+  <section id="main">
+    <div class="container">
+      <!-- 왼쪽 영역 -->
+      <div class="left">
+        <h1>프로필 <span>PROFILE</span></h1>
+        <img src="image/증사.jpg" alt="프로필 사진" class="profile-img">
+      </div>
 
-    <div class="right">
-      <p><strong>Name</strong>김소원 (Kim Sowon)</p><br>
+      <!-- 구분선 -->
+      <div class="divider"></div>
 
-      <p><strong>Nickname</strong>지니</p><br>
+      <!-- 오른쪽 영역 -->
+      <div class="right">
+        <p><strong>Name</strong>김소원 (Kim Sowon)</p><br>
+        <p><strong>Nickname</strong>지니</p><br>
+        <p><strong>Date</strong>2007.11.17</p><br>
+        <p><strong>Mail</strong>gim564568@gmail.com</p><br>
+        <p><strong>Certificate</strong><br>
+          전기기능사<br>
+          PC정비사 2급<br>
+          정보처리기능사(필기)<br>
+          ITQ 아래한글 A<br>
+          초경량 비행장치 조종자 (무인 멀티콥터 1종)
+        </p>
 
-      <p><strong>Date</strong>2007.11.17</p><br>
+        <div>
+          <button id="moreBtn">MORE</button>
+        </div>
+      </div>
+    </div>
+  </section>
 
-      <p><strong>Mail</strong>gim564568@gmail.com</p><br>
-
-      <p><strong>Certificate</strong>
-
-        전기기능사<br>
-        PC정비사 2급<br>
-        정보처리기능사(필기)<br>
-        ITQ 아래한글 A<br>
-        초경량 비행장치 조종자 (무인 멀티콥터 1종)
-      </p>
-
-<div>
-  <button id="moreBtn">MORE</button> <!-- id 추가 -->
-</div>
-
-<script>
-  const btn = document.getElementById('moreBtn'); // id가 "moreBtn"인 버튼 선택
-  btn.addEventListener('click', () => {           // 클릭 이벤트 등록
-    window.location.href = 'profile.html'; // 클릭 시 해당 URL로 이동
-  });
-</script>
+  <!-- 🔹 자바스크립트 (버튼 클릭 시 페이지 이동) -->
+  <script>
+    const btn = document.getElementById('moreBtn');
+    btn.addEventListener('click', () => {
+      window.location.href = 'profile.html';
+    });
+  </script>
 
 </body>
 </html>
