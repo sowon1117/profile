@@ -1,218 +1,158 @@
-/* ✅ 기본 설정 */
+/* 전체 배경과 기본 설정 */
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Pretendard-Regular', sans-serif;
   background-color: #042550;
   color: white;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 100vh;
+  font-family: 'Pretendard', sans-serif;
+  user-select: none;
+  height: 100vh;
+  overflow-y: auto;
 }
 
-/* ✅ 메인 컨테이너 */
 .profile-container {
   display: flex;
-  flex-wrap: wrap;
-  width: 90%;
+  width: 80%;
   max-width: 1000px;
-  margin-top: 100px;  /* 상단 고정 버튼 공간 확보 */
+  height: 100vh;
   border-radius: 40px;
+  margin: 0 auto;
+  overflow: hidden;
   align-items: stretch;
-  gap: 1rem;
 }
 
-/* ✅ 가운데 세로 구분선 */
-.divider {
-  width: 2px;
-  background-color: white;
-  margin: 0 20px;
-}
-
-/* ✅ 가로 구분선 */
-.horizontal-divider {
-  border: 0;
-  border-top: 1px solid white;
-  margin: 2rem 0;
-}
-
-
-/* ✅ 왼쪽/오른쪽 영역 */
-.profile-left,
-.profile-right {
-  flex: 1;
-  min-width: 300px;
+/* 왼쪽 이미지 영역 */
+.profile-left {
+  flex: 1.5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 1rem;
+  height: 100%;
 }
 
-/* ✅ 프로필 이미지 */
 .profile-img {
-  max-width: 220px;
-  width: 100%;
-  border-radius: 20px;
-  margin-bottom: 1rem;
+  width: 80%;
+  max-width: 250px;
+  border-radius: 20%;
+  border: 2px solid white;
+  pointer-events: none;
+  user-drag: none;
+  height: auto;
+  max-height: 100%;
 }
 
-/* ✅ 이름 스타일 */
+/* 오른쪽 정보 영역 */
+.profile-right {
+  flex: 2;
+  padding: 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+}
+
 .name {
   font-size: 2.5rem;
-  font-weight: bold;
-  margin: 0;
+  margin-bottom: 1rem;
 }
 
 .name span {
   font-size: 1.2rem;
-  color: #bbbbbb;
+  color: #888;
 }
 
-/* ✅ 상단 고정 버튼 */
+/* 리스트 기본 스타일 */
+ul {
+  list-style: none;
+  padding-left: 1.5rem;
+}
+
+ul li::before {
+  content: "- ";
+  color: #ccc;
+}
+
+/* 버튼 */
+button {
+  margin-top: 2vw;
+  padding: 0.7em 1.6em;
+  font-size: clamp(14px, 1.2vw, 18px);
+  background: transparent;
+  color: white;
+  border: 1px solid white;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+button:hover {
+  background: white;           
+  color: black;                
+}
+
+/* 추가 정보 섹션 */
+.additional-info {
+  max-width: 1000px;
+  margin: 0 auto 60px auto;
+  padding: 2rem;
+  color: white;
+}
+
+/* 각 큰 제목 (교내 수상 등) */
+.additional-info h2 {
+  font-size: 1.8rem;
+  border-bottom: 2px solid white;
+  padding-bottom: 0.5rem;
+  margin-top: 2rem;
+  margin-bottom: 0.3rem;
+}
+
+/* 영어 소제목 (예: in-school activities, an on-campus award 등) */
+.school,
+.Award,
+.activities,
+.training {
+  font-size: 0.9rem;
+  color: #aaa;
+  margin-left: 0.5rem;
+}
+
+/* 학년 텍스트 */
+.grade h3 {
+  color: #aaa;
+  font-size: 1.2rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.3rem;
+}
+
+/* 학기 텍스트 */
+.semester h4 {
+  color: #bbb;
+  font-size: 1.05rem;
+  margin: 0.3rem 0 0.3rem 1rem;
+}
+
 .header-buttons {
   position: fixed;
-  top: 20px;
+  top: 15px;
   right: 20px;
   display: flex;
-  gap: 15px;
-  z-index: 999;
+  gap: 10px;
+  z-index: 9999;
 }
 
 .header-buttons button {
   background-color: transparent;
   color: white;
   border: 1px solid white;
-  padding: 6px 12px;
-  font-size: 0.9rem;
+  padding: 7px 13px;
+  font-size: 0.8rem;
   cursor: pointer;
-  border-radius: 6px;
+  border-radius: 5px;
   transition: all 0.3s ease;
 }
 
 .header-buttons button:hover {
   background-color: white;
   color: #042550;
-}
-
-/* ✅ BACK 버튼 (사용하지 않았지만 유지) */
-.back-button {
-  background-color: transparent;
-  color: white;
-  border: 1px solid white;
-  padding: 6px 12px;
-  font-size: 0.9rem;
-  cursor: pointer;
-  border-radius: 6px;
-  margin-top: 1rem;
-  transition: all 0.3s ease;
-}
-
-.back-button:hover {
-  background-color: white;
-  color: #042550;
-}
-
-/* ✅ ul 항목 불릿 */
-ul {
-  list-style: none;
-  padding-left: 1.2rem;
-}
-
-ul li::before {
-  content: "- ";
-  color: #aaaaaa;
-}
-
-/* ✅ 학년/학기 제목 */
-.grade h3 {
-  color: #bbbbbb;
-}
-
-.semester h4 {
-  color: #dddddd;
-}
-
-/* ✅ 부제목 */
-.school,
-.Award,
-.activities,
-.training {
-  color: #cccccc;
-  font-size: 0.9rem;
-  margin-left: 10px;
-}
-
-/* ✅ 추가 정보 영역 */
-.additional-info {
-  width: 90%;
-  max-width: 1000px;
-  padding: 2rem;
-}
-
-/* ✅ 세로 구분선 */
-.divider {
-  width: 2px;
-  background-color: white;
-}
-
-/* ✅ 반응형 태블릿 */
-@media (max-width: 1024px) {
-  .profile-container {
-    flex-direction: column;
-    height: auto;
-    padding: 1rem;
-  }
-
-  .profile-left,
-  .profile-right {
-    width: 100%;
-    text-align: center;
-  }
-
-  .profile-img {
-    max-width: 180px;
-  }
-
-  .name {
-    font-size: 2rem;
-  }
-
-  .header-buttons {
-    top: 10px;
-    right: 10px;
-    gap: 5px;
-  }
-
-  .header-buttons button,
-  .back-button {
-    font-size: 0.75rem;
-    padding: 6px 10px;
-  }
-
-  .divider {
-    display: none;
-  }
-}
-
-/* ✅ 반응형 모바일 */
-@media (max-width: 600px) {
-  .name {
-    font-size: 1.6rem;
-  }
-
-  .name span {
-    font-size: 1rem;
-  }
-
-  .header-buttons button,
-  .back-button {
-    font-size: 0.7rem;
-    padding: 5px 8px;
-  }
-
-  .additional-info {
-    padding: 1rem;
-  }
-
-  .divider {
-    display: none;
-  }
 }
