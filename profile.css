@@ -75,16 +75,20 @@ ul li::before {
 
 /* 버튼 */
 button {
-  margin-top: 2vw;
-  padding: 0.7em 1.6em;
-  font-size: clamp(14px, 1.2vw, 18px);
+  margin-top: 1vw;
+  padding: 6px 12px;
+  font-size: 0.9rem;
   background: transparent;
   color: white;
   border: 1px solid white;
-  border-radius: 8px;
+  border-radius: 6px;
   cursor: pointer;
-  transition: background 0.3s;
+  transition: all 0.3s ease;
+  width: 80px;          /* 원하는 가로 길이로 조정 */
+  min-width: 0;         /* 기본 최소 너비 해제 */
+  text-align: center;   /* 텍스트 가운데 정렬 */
 }
+
 button:hover {
   background: white;           
   color: black;                
