@@ -1,53 +1,79 @@
-/* 배경과 기본 설정 */
+/* ✅ 기본 설정 */
 body {
   margin: 0;
   padding: 0;
+  font-family: 'Pretendard-Regular', sans-serif;
   background-color: #042550;
   color: white;
-  font-family: 'Pretendard', sans-serif;
-  user-select: none;
-  height: 100vh;
+  overflow-x: hidden;
   overflow-y: auto;
+  height: 100vh;
 }
 
-/* 중앙 정렬을 위한 컨테이너 */
+/* ✅ 오른쪽 상단 버튼 고정 */
+.header-buttons {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 10px;
+  z-index: 1000;
+}
+
+.header-buttons button {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 6px 12px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.header-buttons button:hover {
+  background-color: white;
+  color: #042550;
+}
+
+/* 🔹 프로필 컨테이너: 좌우 영역 */
 .profile-container {
   display: flex;
+  align-items: flex-start; /* 위쪽 정렬 */
+  justify-content: center;
   width: 80%;
   max-width: 1000px;
-  height: auto;
-  border-radius: 40px;
   margin: 40px auto;
+  gap: 40px;
+  box-sizing: border-box;
+  border-radius: 40px;
   overflow: visible;
-  align-items: flex-start;
-  position: relative;
-  top: auto;
-  transform: none;
+  height: auto;
+  padding: 20px 0;
 }
 
-/* 왼쪽 이미지 + 좌우명 영역 */
+/* 🔹 왼쪽: 이미지 + 좌우명 */
 .profile-left {
   flex: 1.5;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   align-items: center;
-  padding: 1rem;
-  height: auto;
+  text-align: center;
+  gap: 10px;
   box-sizing: border-box;
+  padding: 1rem;
 }
 
 .profile-img {
-  width: 80%;
-  max-width: 250px;
+  width: 200px;
+  height: 250px;
+  object-fit: cover;
   border-radius: 20%;
   border: 2px solid white;
+  user-select: none;
   pointer-events: none;
   user-drag: none;
-  height: auto;
-  max-height: 100%;
-  display: block;
-  margin-bottom: 10px;
+  margin-bottom: 0;
 }
 
 .motto {
@@ -55,7 +81,6 @@ body {
   font-weight: 500;
   font-size: 14px;
   color: #ddd;
-  text-align: center;
   margin: 0;
 }
 
@@ -64,28 +89,30 @@ body {
   font-weight: 600;
   font-size: 15px;
   color: #f0f0f0;
-  text-align: center;
   margin-top: 4px;
 }
 
-/* 구분선 */
+/* 🔹 중앙 구분선 */
 .divider {
-  width: 1.5px;
+  width: 3px;
   background-color: white;
   flex-shrink: 0;
+  align-self: stretch; /* 부모 높이에 맞게 늘어나도록 */
   margin: 0 20px;
-  align-self: stretch;
+  height: 250px; /* 이미지 높이에 맞춰 고정 */
 }
 
-/* 오른쪽 정보 영역 */
+/* 🔹 오른쪽: 이름, 닉네임, 메일 등 텍스트 영역 */
 .profile-right {
   flex: 2;
-  padding: 2rem 3rem;
+  max-width: 400px;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  height: auto;
+  line-height: 1.8;
+  padding: 2rem 3rem;
   box-sizing: border-box;
+  height: auto;
 }
 
 .name {
@@ -98,7 +125,7 @@ body {
   color: #888;
 }
 
-/* 리스트 기본 스타일 */
+/* 리스트 스타일 */
 ul {
   list-style: none;
   padding-left: 1.5rem;
@@ -109,7 +136,7 @@ ul li::before {
   color: #ccc;
 }
 
-/* 버튼 공통 스타일 */
+/* 버튼 스타일 */
 button {
   margin-top: 1vw;
   padding: 6px 12px;
@@ -139,7 +166,7 @@ button:hover {
   margin-top: 60px;
 }
 
-/* 각 큰 제목 (교내 수상 등) */
+/* 추가 정보 제목 스타일 */
 .additional-info h2 {
   font-size: 1.8rem;
   border-bottom: 2px solid white;
@@ -171,30 +198,4 @@ button:hover {
   color: #bbb;
   font-size: 1.05rem;
   margin: 0.3rem 0 0.3rem 1rem;
-}
-
-/* 오른쪽 상단 버튼 고정 */
-.header-buttons {
-  position: fixed;
-  top: 20px;
-  right: 20px;
-  display: flex;
-  gap: 10px;
-  z-index: 1000;
-}
-
-.header-buttons button {
-  background-color: transparent;
-  color: white;
-  border: 1px solid white;
-  padding: 6px 12px;
-  font-size: 0.8rem;
-  cursor: pointer;
-  border-radius: 6px;
-  transition: all 0.3s ease;
-}
-
-.header-buttons button:hover {
-  background-color: white;
-  color: #042550;
 }
