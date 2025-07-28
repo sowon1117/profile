@@ -1,4 +1,4 @@
-/* ✅ 전체 기본 설정 */
+/* ✅ 기본 설정 */
 body {
   margin: 0;
   padding: 0;
@@ -11,10 +11,10 @@ body {
   min-height: 100vh;
 }
 
-/* ✅ 메인 컨테이너 - 너비는 고정, 높이는 자동 */
+/* ✅ 메인 컨테이너 */
 .profile-container {
   display: flex;
-  flex-wrap: wrap; /* 화면 작을 때 줄바꿈 허용 */
+  flex-wrap: wrap;
   width: 90%;
   max-width: 1000px;
   margin: 40px auto;
@@ -23,7 +23,7 @@ body {
   gap: 1rem;
 }
 
-/* ✅ 왼쪽 영역과 오른쪽 영역 - 기본은 1:1 비율 */
+/* ✅ 왼쪽/오른쪽 영역 */
 .profile-left,
 .profile-right {
   flex: 1;
@@ -31,11 +31,11 @@ body {
   padding: 1rem;
 }
 
-/* ✅ 프로필 이미지 */
+/* ✅ 프로필 이미지 - 너무 동그랗지 않게 */
 .profile-img {
   max-width: 220px;
   width: 100%;
-  border-radius: 50%;
+  border-radius: 20px;
   margin-bottom: 1rem;
 }
 
@@ -51,7 +51,7 @@ body {
   color: #bbbbbb;
 }
 
-/* ✅ 상단 버튼 고정 위치 설정 */
+/* ✅ 상단 고정 버튼 */
 .header-buttons {
   position: fixed;
   top: 20px;
@@ -61,7 +61,6 @@ body {
   z-index: 999;
 }
 
-/* ✅ 버튼 스타일 */
 .header-buttons button {
   background-color: transparent;
   color: white;
@@ -73,10 +72,58 @@ body {
   transition: all 0.3s ease;
 }
 
-/* ✅ 버튼 호버 효과 */
 .header-buttons button:hover {
   background-color: white;
   color: #042550;
+}
+
+/* ✅ BACK 버튼 스타일 (추가) */
+.back-button {
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  padding: 6px 12px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  border-radius: 6px;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: white;
+  color: #042550;
+}
+
+/* ✅ ul 항목 - 기본 불릿 대신 회색 "-" */
+ul {
+  list-style: none;
+  padding-left: 1.2rem;
+}
+
+ul li::before {
+  content: "- ";
+  color: #aaaaaa;
+}
+
+/* ✅ 학년 제목 색 */
+.grade h3 {
+  color: #bbbbbb;
+}
+
+/* ✅ 학기 제목 색 */
+.semester h4 {
+  color: #dddddd;
+}
+
+/* ✅ 영어 부제목 회색 */
+.school,
+.Award,
+.activities,
+.training {
+  color: #cccccc;
+  font-size: 0.9rem;
+  margin-left: 10px;
 }
 
 /* ✅ 추가 정보 영역 */
@@ -85,7 +132,7 @@ body {
   padding: 2rem;
 }
 
-/* ✅ 정보 블록 정렬 */
+/* ✅ 좌우 정보 블록 */
 .info-wrapper {
   display: flex;
   flex-direction: row;
@@ -105,7 +152,7 @@ body {
   background-color: white;
 }
 
-/* ✅ 반응형 태블릿용 */
+/* ✅ 반응형 태블릿 */
 @media (max-width: 1024px) {
   .profile-container {
     flex-direction: column;
@@ -138,9 +185,14 @@ body {
     font-size: 0.75rem;
     padding: 6px 10px;
   }
+
+  .back-button {
+    font-size: 0.75rem;
+    padding: 6px 10px;
+  }
 }
 
-/* ✅ 반응형 모바일용 */
+/* ✅ 반응형 모바일 */
 @media (max-width: 600px) {
   .name {
     font-size: 1.6rem;
@@ -155,12 +207,17 @@ body {
     padding: 5px 8px;
   }
 
+  .back-button {
+    font-size: 0.7rem;
+    padding: 5px 8px;
+  }
+
   .additional-info {
     padding: 1rem;
   }
 
   .divider {
-    display: none; /* 세로선 제거 */
+    display: none;
   }
 
   .info-wrapper {
