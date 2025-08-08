@@ -19,8 +19,8 @@ html {
 /* ✅ 오른쪽 상단 버튼 고정 */
 .header-buttons {
   position: fixed;
-  top: 20px;
-  right: 20px;
+  top: 10px;
+  right: 10px;
   display: flex;
   gap: 10px;
   z-index: 1000;
@@ -55,6 +55,8 @@ html {
   padding: 20px;
   box-sizing: border-box;
   border-radius: 40px;
+  min-height: 100vh; /* height 대신 min-height */
+  padding-top: 80px; /* 상단 버튼 피해서 내려오게 */
 }
 
 /* 🔹 왼쪽: 이미지 + 좌우명 */
