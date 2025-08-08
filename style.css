@@ -44,10 +44,11 @@ body {
 }
 
 .intro-content span {
-  font-size: 1.7rem;
-  margin-bottom: 20px;
-  line-height: 40px;
+  display: inline-block;
+  max-width: 90%;
+  word-break: keep-all; /* 단어 잘림 방지 */
 }
+
 
 .intro-content p {
   font-size: 1.2rem;
@@ -340,7 +341,7 @@ body {
     padding: 15px 20px;
     font-size: 0.95rem;
   }
-  
+
    section {
     min-height: calc(var(--vh, 1vh) * 100);
   }
